@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layouts - flex</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .animation,
+    .flex {
+      font-size: 4vmin;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: -1vmin;
+      transform: translate(-50%, 0);
+      width: 82vmin;
+      height: 92vmin;
+      padding: 5vmin 9vmin;
+    }
+
+    .flex {
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .flex-header__main,
+    .flex-header__nav,
+    .flex-main__content,
+    .flex-main__sidebar,
+    .flex-footer {
+      border: 0.5vmin solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flex-header {
+      flex-grow: 3;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flex-header__main {
+      margin-bottom: 1vmin;
+      flex-grow: 5;
+    }
+
+    .flex-header__nav {
+      flex-grow: 1;
+    }
+
+    .flex-main {
+      flex-grow: 15;
+      display: flex;
+      justify-content: space-between;
+      margin: 2vmin 0;
+    }
+
+    .flex-main__content {
+      flex-grow: 5;
+      margin-right: 2vmin;
+    }
+
+    .flex-main__sidebar {
+      flex-grow: 1;
+    }
+
+    .flex-footer {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex">
+    <header class="flex-header">
+      <section class="flex-header__main">header</section>
+
+      <nav class="flex-header__nav">navigation</nav>
+    </header>
+
+    <main class="flex-main">
+      <section class="flex-main__content">content</section>
+
+      <aside class="flex-main__sidebar">sidebar</aside>
+    </main>
+
+    <footer class="flex-footer">footer</footer>
+  </div>
+</body>
+
+</html>

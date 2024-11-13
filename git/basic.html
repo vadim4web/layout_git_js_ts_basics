@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>git-basic</title>
+  <style>
+    code {
+      display: block;
+      border: 0.1rem solid #000;
+      width: calc(100vmin - 6rem);
+      max-width: 80ch;
+      position: relative;
+      border-radius: 0.5rem;
+      position: relative;
+      font-weight: bold;
+      overflow-wrap: break-word;
+      /* Allows word breaks */
+      overflow-x: auto;
+      height: fit-content;
+      height: auto;
+      padding: 2rem 1rem 0.75rem;
+    }
+
+    code::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 1rem);
+      height: 1rem;
+      background-color: gray;
+      content: attr(title);
+      color: whitesmoke;
+      padding: 0.25rem 0.5rem;
+    }
+
+    var {
+      background-color: lightgray;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    To push your code into the <var>master</var> branch of the
+    <var>git@example.com:example/test.git</var>, you will need to follow several
+    steps.
+    Here are the detailed instructions:
+  </p>
+
+  <ol>
+    <li>
+      <strong>
+        Initializing a local git repository:
+      </strong>
+      If you don't already have a local git repository for your project, you
+      must create one.
+      To do this, go to the folder with your code via the command line and run
+      the following command:
+
+      <code title="bash">
+        git init
+      </code>
+
+    </li>
+    <li>
+      <strong>
+        Adding and committing your code:
+      </strong>
+      Add all files and changes in your project to the git index and commit.
+      Use the following commands:
+
+      <code title="bash">
+        git add .<br>
+        git commit -m "Your commit comment"
+      </code>
+    </li>
+    <li>
+      <strong>
+        Adding a Remote Repository:
+      </strong>
+      Now you need to add the remote repository
+      <var>git@example.com:example/test.git</var> to your local git repository.
+      Run the command:
+
+      <code title="bash">
+        git remote add origin git@example.com:example/test.git
+      </code>
+    </li>
+    <li>
+      <strong>
+        Pushing code to a remote repository:
+      </strong>
+      Upload your code to the remote repository master branch:
+
+      <code title="bash">
+        git push -u origin master
+      </code>
+
+      This command will push your code to the <var>master</var> branch of the
+      remote repository. After this, you will be asked to enter credentials
+      (username and password) to access the remote repository.
+    </li>
+    <li>
+      <strong>
+        Completion:
+      </strong>
+      Your code should now be uploaded to the <var>master</var> branch of the
+      <var>git@example.com:example/test.git</var>. You can check this by going
+      to the repository page on GitLab or using the <span
+        style="background-color: lightgrey; font-weight: bold;">&nbsp;git
+        log&nbsp;</span> command to view the commit history.
+    </li>
+  </ol>
+
+  <p>
+    <strong>
+      That's it, your code is now available in the repository on the
+      <var>master</var> branch.
+    </strong>
+  </p>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layouts - animation</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .animation {
+      font-size: 4vmin;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 0);
+      width: 82vmin;
+      height: 92vmin;
+      padding: 5vmin 9vmin 5vmin;
+    }
+
+    @keyframes rotation {
+      from {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(1turn);
+      }
+    }
+
+    @keyframes colorChanging {
+      0% {
+        background-color: red;
+      }
+
+      34% {
+        background-color: orange;
+      }
+
+      67% {
+        background-color: green;
+      }
+    }
+
+    .animation {
+      position: relative;
+    }
+
+    .square {
+      position: absolute;
+      width: 50vmin;
+      height: 50vmin;
+      top: 50%;
+      left: 50%;
+      background-color: red;
+
+      animation:
+        rotation 5s linear infinite forwards,
+        colorChanging 5s linear infinite forwards;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="animation">
+    <div class="square"></div>
+  </div>
+</body>
+
+</html>

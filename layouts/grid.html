@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layouts - grid</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .grid {
+      font-size: 4vmin;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: -1vmin;
+      transform: translate(-50%, 0);
+      width: 82vmin;
+      height: 92vmin;
+      padding: 5vmin 9vmin 5vmin;
+    }
+
+    .grid {
+      color: #000;
+      display: grid;
+      grid-template-rows: 5fr 12fr 2fr;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+      gap: 2vmin;
+    }
+
+    .grid-header {
+      grid-area: header;
+    }
+
+    .grid-main {
+      grid-area: main;
+    }
+
+    .grid-footer {
+      grid-area: footer;
+    }
+
+    .grid-header {
+      display: grid;
+      grid-template-rows: 2fr 1fr;
+      gap: 1vmin;
+    }
+
+    .grid-main {
+      display: grid;
+      grid-template-columns: 7fr 3fr;
+      gap: 2vmin;
+    }
+
+    .grid-header__main,
+    .grid-header__nav,
+    .grid-main__content,
+    .grid-main__sidebar,
+    .grid-footer {
+      border: 0.5vmin solid #000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <header class="grid-header">
+      <section class="grid-header__main">header</section>
+
+      <nav class="grid-header__nav">navigation</nav>
+    </header>
+
+    <main class="grid-main">
+      <section class="grid-main__content">content</section>
+
+      <aside class="grid-main__sidebar">sidebar</aside>
+    </main>
+
+    <footer class="grid-footer">footer</footer>
+  </div>
+</body>
+
+</html>

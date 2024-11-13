@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevIT Team - We are IT specialists ;)</title>
+  <link rel="shortcut icon"
+    href="https://devit-team.com/app/uploads/2019/01/logo.png"
+    type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <meta name="description"
+    content="We are developers who adore their work. We create websites, blogs, landings of various complexity for your brand. Also, we make own products. Developing and learning every day is our principle of life. Thus, in work we use only modern technologies.">
+  <style>
+    :root {
+      --azure: #0056B9;
+      --gold: #FFD800;
+    }
+
+    body {
+      font-family: 'Victor Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-weight: 500;
+    }
+
+    header {
+      background-color: var(--azure);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      line-break: anywhere;
+
+      min-height: max-content;
+    }
+
+    header a {
+      display: inline-block;
+      margin: 3vmin;
+    }
+
+    footer {
+      background-color: var(--gold);
+      color: #000;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+    }
+
+    header,
+    footer {
+      font-size: 150%;
+      background-image: linear-gradient(to bottom right, var(--azure), var(--gold));
+    }
+
+    address {
+      width: 90vmin;
+      display: flex;
+      justify-content: space-between;
+
+      margin: 0 auto;
+    }
+
+    address a img {
+      width: 9vmin;
+    }
+
+    address a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    h1,
+    h3 {
+      margin: 0;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    .main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    ul,
+    .main>p:first-of-type,
+    .main>p:nth-of-type(2) {
+      text-align: center;
+    }
+
+    li>ul {
+      font-size: smaller;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .layout_image {
+      display: block;
+      margin: 0 auto;
+
+      max-width: 100%;
+    }
+
+    ul>li>a {
+      font-weight: 600;
+      font-size: 150%;
+    }
+
+    iframe:not(.open) {
+      height: 0 !important;
+      transition: height 500ms;
+      overflow: hidden;
+      width: calc(100% - 0.25rem);
+    }
+
+    iframe.open {
+      height: auto;
+      transition: height 500ms;
+    }
+
+    section h3 {
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      overflow-y: scroll;
+      margin-top: 0.75rem;
+    }
+
+    code,
+    pre {
+      width: 100%;
+      overflow-x: scroll;
+    }
+
+    section+hr {
+      height: 4px;
+      background-color: #9a9a9a;
+      margin: 0;
+    }
+
+    @media (orientation: portrait) {
+      iframe.open {
+        height: 90vmax;
+      }
+
+      #flex,
+      #grid,
+      #animation {
+        height: 90vmin;
+      }
+
+      #js-logic>.solution>iframe.open {
+        height: 75vmax;
+        overflow-y: hidden;
+      }
+
+      .close-button {
+        width: 5vmax;
+        height: 5vmax;
+        bottom: 3vmax;
+      }
+
+      #openMenuButton {
+        width: 5vmax;
+        height: 5vmax;
+        right: 3vmax;
+      }
+    }
+
+    @media (orientation: landscape) {
+      #gb.open {
+        height: 85vmin;
+      }
+
+      #extended.open {
+        height: 105vmin;
+      }
+
+      #flex,
+      #grid,
+      #animation {
+        height: 90vmin;
+      }
+
+      #js-logic>.solution>iframe.open {
+        height: 75vmin;
+      }
+
+      .close-button {
+        width: 5vmin;
+        height: 5vmin;
+        bottom: 3vmin;
+      }
+
+      #openMenuButton {
+        width: 5vmin;
+        height: 5vmin;
+        right: 3vmin;
+      }
+    }
+
+    code {
+      display: block;
+      border: 0.1rem solid #000;
+      max-width: 100%;
+      position: relative;
+      border-radius: 0.5rem;
+      overflow-y: hidden;
+    }
+
+    pre {
+      position: relative;
+      left: -2.5rem;
+      top: 1.75rem;
+      font-weight: bold;
+      overflow-x: scroll;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      width: 100dvw;
+      height: 100dvh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      z-index: 1000;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    #navigationMenu nav {
+      font-size: 100%;
+      line-height: 120%;
+    }
+
+    @media (max-width: 768px),
+    (resolution: 72dpi) {
+
+
+      #js-logic code {
+        padding-bottom: 2rem;
+      }
+
+
+      .close-button,
+      #openMenuButton {
+        width: 6vmax !important;
+        height: 6vmax !important;
+      }
+    }
+
+    @media (max-width: 768px) and (orientation: landscape),
+    (max-height: 720px) and (orientation: landscape),
+    (resolution: 72dpi) and (orientation: landscape) {
+
+      #navigationMenu nav {
+        height: calc(100% - 3rem);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #navigationMenu nav>ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        align-content: center;
+        justify-items: center;
+      }
+
+      #navigationMenu nav>ul>li {
+        display: grid;
+        grid-template-columns: 4rem 1fr;
+        justify-items: center;
+      }
+
+      #navigationMenu nav>ul>li>a:first-of-type {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #navigationMenu nav>ul>li>ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 555px) and (orientation: landscape),
+    (max-height: 555px) and (orientation: landscape),
+    (resolution: 72dpi) and (orientation: landscape) {
+
+      #navigationMenu nav {
+        font-size: 75%;
+        line-height: 100%;
+      }
+    }
+
+    code::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 1rem);
+      height: 1rem;
+      background-color: gray;
+      content: '#example';
+      color: whitesmoke;
+      padding: 0.25rem 0.5rem;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+
+    var {
+      background-color: lightgray;
+      font-weight: bold;
+    }
+
+    .close-button {
+      left: 50%;
+    }
+
+    .close-button,
+    #openMenuButton {
+      position: fixed;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: transparent;
+
+      min-width: 2.5rem;
+    }
+
+
+    #openMenuButton {
+      background-color: transparent;
+      display: none;
+      z-index: 1;
+      top: 50%;
+    }
+
+    #openMenuButton::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #0008;
+      filter: blur(1.5rem);
+    }
+
+    #openMenuButton::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #fffc;
+      z-index: -1;
+      filter: blur(1.5rem);
+    }
+
+    #openMenuButton>img,
+    .close-button>img {
+      width: 100%;
+      height: auto;
+    }
+
+    .close-button>img {
+      width: 100%;
+      height: auto;
+      transform: scale(1.5) translate(-25%, 10%);
+    }
+
+    .note {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      font-style: italic;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    .note h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .note p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0074e4;
+    }
+
+    #js-logic iframe {
+      width: calc(100% - 0.25rem);
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (orientation: portrait)
+    {
+      #js-logic iframe {
+        height: calc(100vmax - 0.65rem);
+      }
+    }
+
+    @media (orientation: landscape)
+    {
+      #js-logic iframe {
+        height: calc(100vmin - 0.65rem);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="https://devit-team.com/">
+      <img src="https://devit-team.com/app/uploads/2019/01/logo.svg"
+        alt="DevIT logo" style="width: 25vmin;">
+    </a>
+
+
+    <a href="https://github.com/8ogdanovv/devit-team">
+      <h1>DevIT Team Test Tasks Repository</h1>
+
+      <p>Welcome to the DevIT Team Test Tasks repository!</p>
+    </a>
+  </header>
+
+  <main class="main">
+    <p>
+      This repository contains a collection of test tasks and solutions for
+      various development disciplines.
+    </p>
+
+    <p>
+      Here you'll find tasks related to Git, HTML/CSS, JavaScript, and more.
+      Each task is organized in its own subfolder with detailed descriptions and
+      implementations.
+    </p>
+
+    <!-- Button to open the navigation menu -->
+    <button id="openMenuButton">
+      <!-- <img src="./assets/transparent-bulleted-icon-bulleted-list-icon-bullets-icon-5dbc25bae95631.5279306415726115149558.png" alt="Bullet point menu icon"> -->
+      <img src="./assets/list.png" alt="Bullet point menu icon">
+    </button>
+
+    <!-- Navigation menu -->
+    <div id="navigationMenu" class="menu">
+      <h2 style="background-color: black; color: white;">Navigate Through the
+        Tasks</h2>
+
+      <button id="closeMenuButton" class="close-button">
+        <img src="./assets/black-circle-close-button-png-5.png"
+          alt="close button">
+      </button>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#git" onclick="closeMenu()">=== GIT ===</a>
+            <ul>
+              <li><a href="#git1_basic" class="scroll_and_open">git - basic</a>
+              </li>
+              <li><a href="#git2_extended" class="scroll_and_open">git -
+                  extended</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#layout" onclick="closeMenu()">=== CSS, HTML ===</a>
+            <ul>
+              <li><a href="#layout1_flex" class="scroll_and_open">Flexbox
+                  layout</a></li>
+              <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid
+                  layout</a></li>
+              <li><a href="#layout3_animation" class="scroll_and_open">Animation
+                  layout</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#js-logic" onclick="closeMenu()">=== JS Logic ===</a>
+            <ul>
+              <li>
+                <a href="#js1" class="scroll_and_open">deepEqual Function</a>
+              </li>
+              <li>
+                <a href="#js2" class="scroll_and_open">chunkArray Function</a>
+              </li>
+              <li>
+                <a href="#js3" class="scroll_and_open">bulkRun Function</a>
+              </li>
+              <li>
+                <a href="#js4" class="scroll_and_open">arrayToObject Function</a>
+              </li>
+              <li>
+                <a href="#js5" class="scroll_and_open">objectToArray Function</a>
+              </li>
+              <li>
+                <a href="#js6" class="scroll_and_open">reliableMultiply Function</a>
+              </li>
+              <li>
+                <a href="#js7" class="scroll_and_open">mapObject Function</a>
+              </li>
+              <li>
+                <a href="#js8" class="scroll_and_open">combos Function</a>
+              </li>
+              <li>
+                <a href="#js9" class="scroll_and_open">add Function</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <h2>Navigate Through the Tasks</h2>
+
+    <nav>
+      <ul>
+        <li><a href="#git">=== GIT ===</a>
+          <ul>
+            <li><a href="#git1_basic" class="scroll_and_open">git - basic</a>
+            </li>
+            <li><a href="#git2_extended" class="scroll_and_open">git -
+                extended</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#layout">=== CSS, HTML ===</a>
+          <ul>
+            <li><a href="#layout1_flex" class="scroll_and_open">Flexbox
+                layout</a></li>
+            <li><a href="#layout2_grid" class="scroll_and_open">CSS Grid
+                layout</a></li>
+            <li><a href="#layout3_animation" class="scroll_and_open">Animation
+                layout</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#js-logic">=== JS Logic ===</a>
+          <ul>
+            <li>
+              <a href="#js1" class="scroll_and_open">deepEqual Function</a>
+            </li>
+            <li>
+              <a href="#js2" class="scroll_and_open">chunkArray Function</a>
+            </li>
+            <li>
+              <a href="#js3" class="scroll_and_open">bulkRun Function</a>
+            </li>
+            <li>
+              <a href="#js4" class="scroll_and_open">arrayToObject Function</a>
+            </li>
+            <li>
+              <a href="#js5" class="scroll_and_open">objectToArray Function</a>
+            </li>
+            <li>
+              <a href="#js6" class="scroll_and_open">reliableMultiply Function</a>
+            </li>
+            <li>
+              <a href="#js7" class="scroll_and_open">mapObject Function</a>
+            </li>
+            <li>
+              <a href="#js8" class="scroll_and_open">combos Function</a>
+            </li>
+            <li>
+              <a href="#js9" class="scroll_and_open">add Function</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <hr>
+
+    <section id="git">
+      <h2>Git</h2>
+
+      <strong>
+        Working Environment
+      </strong>
+
+      <p>
+        You've completed work on a task for a client, and you have a working
+        code that was created without using Git. The client has created an empty
+        Git repository at <a
+          href="mailto:git@example.com">git@example.com</a>:example/test.git and
+        has granted you access.
+      </p>
+
+      <strong>
+        Task
+      </strong>
+
+      <p>
+        Describe your next steps to make your code appear in the 'master' branch
+        of the repository at <a
+          href="mailto:git@example.com">git@example.com</a>:example/test.git.
+      </p>
+
+      <hr>
+
+      <div class="solution" id="git1_basic"
+        onclick="toggleOpen(document.getElementById('gb'))">
+        <h3>
+          solution - basic
+        </h3>
+
+        <iframe id="gb" src="./git/basic.html"
+          onload="attachClickEvent(this)"></iframe>
+      </div>
+
+      <hr>
+
+      <div class="solution" id="git2_extended"
+        onclick="toggleOpen(document.getElementById('extended'))">
+        <h3>
+          solution - extended
+        </h3>
+
+        <iframe id="extended" src="./git/extended.html"
+          onload="attachClickEvent(this)"></iframe>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <section id="layout">
+      <h2>HTML/CSS Layout</h2>
+
+      <img
+        class="layout_image"
+        src="https://cloud.devit.group/apps/files_sharing/publicpreview/PgiakbTLHFdBddo?file=/Sandbox%20-%204.%20HTML%20Layout.png&fileId=769835&x=1920&y=1080&a=true"
+        alt="flexbox and grid overview layout"
+      >
+
+      <strong>
+        Task
+      </strong>
+
+      <p>
+        1. Create a layout like this using Flexbox.
+      </p>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="layout1_flex"
+        onclick="toggleOpen(document.getElementById('flex'))"
+      >
+        <h3>solution - flexbox</h3>
+
+        <iframe
+          id="flex" src="./layouts/flex.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
+      </div>
+
+      <p>
+        2. Create a layout like this using CSS Grid.
+      </p>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="layout2_grid"
+        onclick="toggleOpen(document.getElementById('grid'))"
+      >
+        <h3>solution - grid</h3>
+
+        <iframe
+          id="grid" src="./layouts/grid.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
+      </div>
+
+      <p>
+        3. Create an animation: "A square in the center of the window rotates
+        around its axis and changes color from red to orange, then to green."
+      </p>
+
+      <hr>
+
+      <div
+        class="solution" id="layout3_animation"
+        onclick="toggleOpen(document.getElementById('animation'))"
+      >
+        <h3>solution - animation</h3>
+
+        <iframe
+          id="animation"
+          src="./layouts/animation.html"
+          onload="attachClickEvent(this)"
+        ></iframe>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <section id="js-logic">
+      <h2>JavaScript Logic</h2>
+
+      <div class="note">
+        <h3>Note</h3>
+        <p>All solutions have been implemented in TypeScript and are thoroughly
+          documented with comments for clarity.</p>
+        <p class="message">"As mentioned as best variety"</p>
+      </div>
+
+      <strong>
+        Task
+      </strong>
+
+      <p>
+        1. Write the deepEqual function to check two objects for identity.
+      </p>
+
+      <code>
+        <pre>
+          deepEqual({name: 'test'}, {name: 'test'}) // output true
+          deepEqual({name: 'test'}, {name: 'test1'}) // output false
+          deepEqual({name: 'test', data: {value: 1}}, {name: 'test', data: {value: 2}}) // output false
+          deepEqual({name: 'test'}, {name: 'test', age: 10}) // false
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js1"
+        onclick="toggleOpen(document.getElementById('deepEqual'))"
+      >
+        <h3>
+          solution - deepEqual
+        </h3>
+
+        <iframe
+          id="deepEqual"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-mvn6h5?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript deepEqual()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <p>
+        2. Write the <var>chunkArray</var> generator function, which returns an
+        iterator that returns parts of the array of the specified length.
+      </p>
+
+      <code>
+        <pre>
+          const iterator = chunkArray([1,2,3,4,5,6,7,8], 3);
+          iterator.next() // { value: [1,2,3], done: false }
+          iterator.next() // { value: [4,5,6], done: false }
+          iterator.next() // { value: [7,8], done: false }
+          iterator.next() // { value: undefined, done: true }
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js2"
+        onclick="toggleOpen(document.getElementById('chunkArray'))"
+      >
+        <h3>
+          solution - chunkArray
+        </h3>
+
+        <iframe
+          id="chunkArray"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-fy2rrg?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript chunkArray()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <hr>
+
+      <p>
+        3. Write a wrapper function that accepts an array of functions and their
+        parameters as input, and returns an array of the results of their
+        execution. <b>The number of arguments of the executable function is not
+          limited!</b>
+      </p>
+
+      <code>
+        <pre>
+          const f1 = (cb) => {cb(1)}
+          const f2 = (a, cb) => {cb(a)}
+          const f3 = (a, b, cb) => {setTimeout(() => cb([a, b]), 1000)}
+
+          bulkRun(
+            [
+              [f1, []],
+              [f2, [2]]
+              [f3, [3, 4]]
+            ]
+          ).then(console.log)
+          // Output: [1, 2, [3, 4]]
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js3"
+        onclick="toggleOpen(document.getElementById('bulkRun'))"
+      >
+        <h3>
+          solution - bulkRun
+        </h3>
+
+        <iframe
+          id="bulkRun"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-8d4td2?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript bulkRun()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <hr>
+
+      <p>
+        4. Write the <var>arrayToObject</var> method, which turns the array into
+        an object (use recursion).
+      </p>
+
+      <code>
+        <pre>
+          var arr = [['name', 'developer'], ['age', 5], ['skills', [['html',4], ['css', 5], ['js',5]]]];
+
+          arrayToObject(arr)
+          // Outputs: {
+            name: 'developer',
+            age: 5,
+            skills: {
+              html: 4,
+              css: 5,
+              js: 5
+            }
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js4"
+        onclick="toggleOpen(document.getElementById('arrayToObject'))"
+      >
+        <h3>
+          solution - arrayToObject
+        </h3>
+
+        <iframe
+          id="arrayToObject"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-tx9ghg?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript arrayToObject()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <hr>
+
+      <p>
+        5. Write the reverse method (see task 4) objectToArray, which will
+        create an array from the object.
+      </p>
+
+      <code>
+        <pre>
+          objectToArray({
+            name: 'developer',
+            age: 5,
+            skills: {
+              html: 4,
+              css: 5,
+              js: 5
+            }
+          })
+
+          // Outputs: [['name', 'developer'], ['age', 5], ['skills', [['html', 4], ['css', 5], ['js', 5]]]
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js5"
+        onclick="toggleOpen(document.getElementById('objectToArray'))"
+      >
+        <h3>
+          solution - objectToArray
+        </h3>
+
+        <iframe
+          id="objectToArray"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-hjljjh?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript objectToArray()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <hr>
+
+      <p>
+        6. There is a <var>primitiveMultiply</var> function that multiplies
+        numbers, but can randomly throw exceptions like:
+        <var>NotificationException</var>, <var>ErrorException</var>. The task is
+        to write a wrapper function that will repeat the calculation when a
+        <var>NotificationException</var> is thrown, but will stop working when
+        an <var>ErrorException</var> is thrown.
+      </p>
+
+      <code>
+        <pre>
+          function NotificationException() {}
+          function ErrorException() {}
+          function primitiveMultiply(a, b) {
+            const rand = Math.random();
+            if (rand < 0.5) {
+              return a * b;
+            } else if(rand > 0.85) {
+              throw new ErrorException()
+            } else {
+              throw new NotificationException()
+            }
+          }
+
+          function reliableMultiply(a, b) {
+            // your code
+          }
+
+          console.log(reliableMultiply(8, 8));
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js6"
+        onclick="toggleOpen(document.getElementById('reliableMultiply'))"
+      >
+        <h3>
+          solution - reliableMultiply
+        </h3>
+
+        <iframe
+          id="reliableMultiply"
+          src="https://codesandbox.io/embed/jvklh3?view=editor&module=%2Findex.ts"
+          title="TypeScript reliableMultiply()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <hr>
+
+      <p>
+        7. Write a function that takes an object of any nesting and converts it
+        into a single flat map with different levels separated by a slash
+        (<var>'/'</var>).
+      </p>
+
+      <code>
+        <pre>
+          const obj = {
+            a: {
+              b: {
+                c: 12,
+                d: 'Hello World'
+              },
+              e: [1,2,3]
+            }
+          };
+
+          mapObject(demoData);
+          // Outputs: {
+            'a/b/c': 12,
+            'a/b/d': 'Hello World',
+            'a/e': [1,2,3]
+          }
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js7"
+        onclick="toggleOpen(document.getElementById('mapObject'))"
+      >
+        <h3>
+          solution - mapObject
+        </h3>
+
+        <iframe
+          id="mapObject"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-rhpftq?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript mapObject()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <hr>
+
+      <p>
+        8. Write the function <var>combos</var>, which accepts a positive
+        integer number <var>num</var> and returns an array of arrays of positive
+        integers, where the sum of each array is equal to num. Arrays should not
+        be repeated.
+      </p>
+
+      <code>
+        <pre>
+          combos(3);
+          // Output:
+          [
+            [ 3 ],
+            [ 1, 1, 1 ],
+            [ 1, 2 ]
+          ]
+
+          combos(10);
+          // Output:
+          [
+            [ 10 ],
+            [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
+            [ 1, 1, 1, 1, 1, 1, 1, 1, 2 ],
+            [ 1, 1, 1, 1, 1, 1, 1, 3 ],
+            [ 1, 1, 1, 1, 1, 1, 4 ],
+            [ 1, 1, 1, 1, 1, 5 ],
+            [ 1, 1, 1, 1, 6 ],
+            [ 1, 1, 1, 7 ],
+            [ 1, 1, 8 ],
+            [ 1, 9 ],
+            [ 1, 1, 1, 1, 1, 1, 2, 2 ],
+            [ 1, 1, 1, 1, 1, 2, 3 ],
+            [ 1, 1, 1, 1, 2, 4 ],
+            [ 1, 1, 1, 1, 2, 2, 2 ],
+            [ 1, 1, 1, 1, 3, 3 ],
+            [ 1, 1, 1, 2, 5 ],
+            [ 1, 1, 1, 2, 2, 3 ],
+            [ 1, 1, 1, 3, 4 ],
+            [ 1, 1, 2, 6 ],
+            [ 1, 1, 2, 2, 4 ],
+            [ 1, 1, 2, 2, 2, 2 ],
+            [ 1, 1, 2, 3, 3 ],
+            [ 1, 1, 3, 5 ],
+            [ 1, 1, 4, 4 ],
+            [ 1, 2, 7 ],
+            [ 1, 2, 2, 5 ],
+            [ 1, 2, 2, 2, 3 ],
+            [ 1, 2, 3, 4 ],
+            [ 1, 3, 6 ],
+            [ 1, 3, 3, 3 ],
+            [ 1, 4, 5 ],
+            [ 2, 8 ],
+            [ 2, 2, 6 ],
+            [ 2, 2, 2, 4 ],
+            [ 2, 2, 2, 2, 2 ],
+            [ 2, 2, 3, 3 ],
+            [ 2, 3, 5 ],
+            [ 2, 4, 4 ],
+            [ 3, 7 ],
+            [ 3, 3, 4 ],
+            [ 4, 6 ],
+            [ 5, 5 ]
+          ]
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js8"
+        onclick="toggleOpen(document.getElementById('combos'))"
+      >
+        <h3>
+          solution - combos
+        </h3>
+
+        <iframe
+          id="combos"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-n5tpsx?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript combos()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+
+      <hr>
+
+      <p>
+        9. Write the <var>add</var> function, which would work as follows
+        <var>add(1)(2)(7)...(n)</var>. The number of consecutive calls is
+        unlimited.
+      </p>
+
+      <code>
+        <pre>
+          Number(add(1)(2)); // == 3
+          Number(add(1)(2)(5)); // == 8
+          Number(add(1)(2)(-3)(4)); //  == 4
+          Number(add(1)(2)(3)(4)(-5)); // == 5
+        </pre>
+      </code>
+
+      <hr>
+
+      <div
+        class="solution"
+        id="js9"
+        onclick="toggleOpen(document.getElementById('add'))"
+      >
+        <h3>
+          solution - add
+        </h3>
+
+        <iframe
+          id="add"
+          src="https://codesandbox.io/embed/typescript-playground-export-forked-kmgzzp?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+          title="TypeScript add()"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feel free to explore each task's details and implementations in their
+      respective solution blocks.<br />
+      If you have any questions or need further
+      clarification, don't hesitate to reach out.</p>
+
+    <address class="address">
+      <a href="https://8ogdanovv.github.io/">
+        <img src="./assets/logo_light.png" alt="digital-CV">
+      </a>
+      <a href="https://github.com/8ogdanovv">
+        <img src="./assets/2gh.svg" alt="git-hub">
+      </a>
+      <a href="https://www.linkedin.com/in/bogdanovvad1m/">
+        <img src="./assets/3li.svg" alt="linkedin">
+      </a>
+      <a href="https://www.facebook.com/bogdanovvad1m/">
+        <img src="./assets/4fb.svg" alt="facebook">
+      </a>
+      <a href="mailto:8ogdanow@gmail.com">
+        <img src="./assets/5gm.svg" alt="mail">
+      </a>
+      <a href="https://t.me/bogdanovvad1m">
+        <img src="./assets/6tg.svg" alt="telegram">
+      </a>
+      <a href="tel:+380505444199">
+        <img src="./assets/7cp.svg" alt="cell-phone">
+      </a>
+    </address>
+
+    <p class="footer-copyright">
+      <a
+        href="https://bit.ly/2PDFcv">
+        &copy; <span id="current-year"></span> Bogdanov Vadim * Full-stack developer (č) auto-biography coder
+      </a>
+      <br />
+      <span class="contacts">
+        +380505444199 | @bogdanovvad1m | 8ogdanow@gmail.com
+      </span>
+    </p>
+  </footer>
+
+  <script>
+    function closeAllBut(elementToKeepOpen) {
+      // Remove the "open" class from all iframe elements except the specified one
+      const iframeElements = document.getElementsByTagName('iframe');
+      for (const iframe of iframeElements) {
+        if (iframe !== elementToKeepOpen) {
+          iframe.classList.remove('open');
+        }
+      }
+    }
+
+    function toggleOpen(element) {
+      closeAllBut(element);
+      element.classList.toggle('open');
+    }
+
+    function attachClickEvent(iframe) {
+      iframe.contentWindow.document.body.addEventListener('click', function () {
+        toggleOpen(iframe);
+      });
+    }
+
+    // Function to handle the click event
+    function handleScrollAndOpenClick(event) {
+      event.preventDefault(); // Prevent the default link behavior
+
+      // Get the target element by its href attribute
+      const targetId = event.target.getAttribute('href').substring(1); // Remove the "#" symbol
+      const targetElement = document.getElementById(targetId);
+
+      // Check if the navigation menu is open (displayed as "block")
+      const navigationMenu = document.getElementById('navigationMenu');
+      if (navigationMenu.style.display === 'block') {
+        closeMenu(); // Call the closeMenu function
+      }
+
+      // Scroll to the target element
+      targetElement.scrollIntoView({
+        behavior: 'smooth', // Add smooth scrolling effect
+      });
+
+      // After scrolling, trigger a click event on the target element
+      setTimeout(function () {
+        targetElement.click();
+      }, 500); // Delay to ensure the scrolling animation completes
+    }
+
+    // Attach the event listener to all elements with the class "scroll_and_open"
+    const elementsWithListener = document.querySelectorAll('.scroll_and_open');
+    elementsWithListener.forEach(function (element) {
+      element.addEventListener('click', handleScrollAndOpenClick);
+    });
+
+    // Function to open the navigation menu
+    function openMenu() {
+      document.getElementById('navigationMenu').style.display = 'block';
+      document.getElementById('openMenuButton').style.display = 'none'; // Hide open button
+      document.getElementById('closeMenuButton').style.display = 'block'; // Show close button
+    }
+
+    // Function to close the navigation menu
+    function closeMenu() {
+      document.getElementById('navigationMenu').style.display = 'none';
+      document.getElementById('openMenuButton').style.display = 'block'; // Show open button
+      document.getElementById('closeMenuButton').style.display = 'none'; // Hide close button
+    }
+
+    // Add event listener to open menu button
+    document.getElementById('openMenuButton').addEventListener('click', openMenu);
+
+    // Add event listener to close menu button
+    document.getElementById('closeMenuButton').addEventListener('click', closeMenu);
+
+    // Function to check the scroll position and toggle the button
+    function toggleScrollButton() {
+      const openMenuButton = document.getElementById('openMenuButton');
+      const gitSection = document.getElementById('git');
+
+      // Calculate the top offset of the git section
+      const gitSectionTopOffset = gitSection.offsetTop;
+
+      // Get the current scroll position
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+      // Set the scroll threshold to the top offset of the git section
+      const scrollThreshold = gitSectionTopOffset;
+
+      if (scrollPosition >= scrollThreshold) {
+        openMenuButton.style.display = 'block';
+      } else {
+        openMenuButton.style.display = 'none';
+      }
+    }
+
+    // // Function to clear cache if not yet cleaned
+    // function clearCacheIfNotYetCleared() {
+    //   const clearCache = () => {
+    //     if (window.location.reload) {
+    //       // Perform a forced reload (ignoring cache) of the current page
+    //       window.location.reload(true);
+    //     } else {
+    //       // Fallback method for older browsers
+    //       window.location.href = window.location.href;
+    //     }
+    //   }
+
+    //   // Check if the flag exists in local storage
+    //   const cleanUpdateFlag = localStorage.getItem('cleanUpdate');
+
+    //   if (!cleanUpdateFlag) {
+    //     // Flag doesn't exist, clear cache and set the flag
+    //     clearCache();
+
+    //     // Set the flag in local storage to prevent future cache clearing
+    //     localStorage.setItem('cleanUpdate', 'true');
+    //   }
+    // }
+
+    function setCurrentYear() {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    }
+    // Call the clearCacheIfNotYetCleared function on page load
+    window.onload = () => {
+      // clearCacheIfNotYetCleared();
+      setCurrentYear();
+    }
+
+    // Add event listener to the window's scroll event
+    window.addEventListener('scroll', toggleScrollButton);
+  </script>
+</body>
+
+</html>
