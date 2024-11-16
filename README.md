@@ -1,6 +1,6 @@
-# DevIT Team Test Tasks Repository
+# Layout, Git, JavaScript, and TypeScript Basics Repository
 
-Welcome to the DevIT Team Test Tasks repository! This repository contains a collection of test tasks and solutions for various development disciplines.
+Welcome to the Layout, Git, JavaScript, and TypeScript Basics repository! This repository features a collection of test tasks and solutions in various development areas.
 
 Here you'll find tasks related to Git, HTML/CSS, JavaScript, and more. Each task is organized in its own subfolder with detailed descriptions and implementations.
 
